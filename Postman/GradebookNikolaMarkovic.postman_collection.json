@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "9b8b20c8-e56c-479d-8cb6-e55a8f345873",
+		"name": "GradebookNikolaMarkovic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emil}}\",\r\n   \"first_name\":\"{{firstname}}\",\r\n   \"last_name\": \"{{lastname}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"password_confirmation\": \"{{passwordconfirm}}\",\r\n  \r\n    \"terms_conditions\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gradebook-api.vivifyideas.com/api/register?email={{emil}}&first_name={{firstname}}&last_name={{lastname}}&password={{password}}&password_confirmation={{passwordconfirm}}",
+					"protocol": "https",
+					"host": [
+						"gradebook-api",
+						"vivifyideas",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "{{emil}}"
+						},
+						{
+							"key": "first_name",
+							"value": "{{firstname}}"
+						},
+						{
+							"key": "last_name",
+							"value": "{{lastname}}"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "{{passwordconfirm}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nikola.zof@gmail.com\",\r\n    \"password\": \"dukenukem3d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gradebook-api.vivifyideas.com/api/login",
+					"protocol": "https",
+					"host": [
+						"gradebook-api",
+						"vivifyideas",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gradebook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9ncmFkZWJvb2stYXBpLnZpdmlmeWlkZWFzLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTExMzY5NiwiZXhwIjoxNjQxMTQ5Njk2LCJuYmYiOjE2NDExMTM2OTYsImp0aSI6Ikc5MnNWSHVvNW9rZEltQWIiLCJzdWIiOjcsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0RV63ZrOb6fs3jvnj0jB-DptlrrWis9xRL9Dc0ypy-s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://gradebook-api.vivifyideas.com/api/gradebooks/store",
+					"protocol": "https",
+					"host": [
+						"gradebook-api",
+						"vivifyideas",
+						"com"
+					],
+					"path": [
+						"api",
+						"gradebooks",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GradebookAdding new student-negative",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9ncmFkZWJvb2stYXBpLnZpdmlmeWlkZWFzLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTExMzY5NiwiZXhwIjoxNjQxMTQ5Njk2LCJuYmYiOjE2NDExMTM2OTYsImp0aSI6Ikc5MnNWSHVvNW9rZEltQWIiLCJzdWIiOjcsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0RV63ZrOb6fs3jvnj0jB-DptlrrWis9xRL9Dc0ypy-s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \":6\",\r\n    \"first_name\": \"jer\",\r\n    \"last_name\": \"rej\",\r\n    \"imageUrl\": \"https://commons.wikimedia.org/wiki/File:Sunflower_from_Silesia2.jpg\",\r\n    \"gradebook_id\": \":6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gradebook-api.vivifyideas.com/api/gradebooks/students/store",
+					"protocol": "https",
+					"host": [
+						"gradebook-api",
+						"vivifyideas",
+						"com"
+					],
+					"path": [
+						"api",
+						"gradebooks",
+						"students",
+						"store"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "email",
+			"value": "jetyqwrrny@johnybe.good"
+		},
+		{
+			"key": "firstname",
+			"value": "Nikola"
+		}
+	]
+}

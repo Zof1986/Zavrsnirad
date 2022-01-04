@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://gallery-app.vivifyideas.com",
+    "env": {
+        "validLoginEmail" : "nikola.zof@gmail.com",
+        "validPassword" : "dukenukem3d"
+    }
+}

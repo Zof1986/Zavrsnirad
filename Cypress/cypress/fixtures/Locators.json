@@ -1,0 +1,45 @@
+{
+    "Header": {
+        "Login":"a[href='/login']",
+        "Register": "a[href='/register']"
+    },
+
+    "LoginPage": {
+        "EmailInput": "#email",
+        "PasswordINput": "#password",
+        "PasswordInput" : "#userPassword",
+        "SubmitButton": "button[type='submit']"
+    },
+
+    "Logout": {
+        "LogoutButton": "#app",
+        "LogoutUser": "em",
+        "Logoutdropdown":"dropdown-item"
+    },
+
+    "Register": {
+        "Register": "a[href='/register']",
+        "FirstName": "#first-name",
+        "LastName": "#last-name",
+        "Email": "#email",
+        "Password": "#password",
+        "PasswordConfirmed": "#password-confirmation",
+        "Termsandconditions": "#app",
+        "SubmitButton": "button[type='submit']",
+        "SubmitBut": "input[type='checkbox']"
+    },
+
+    "CreateProfessor":{
+        "EnterName": "#input-default",
+        "EnterLastName": "#input-default1",
+        "AddImage": ".btn.btn-image.btn-primary",
+        "AddImageUrl": "#__BVID__39",
+        "SubmitButton": ".btn.btn-secondary"
+    },
+
+    "CreateGradebook":{
+        "AddHeader": "'Add Gradebook'",
+       "AddGradebook": ".input-filed.form-control",
+       "SubmitButton": ".btn.btn-submit.btn-primary"
+    } 
+}
